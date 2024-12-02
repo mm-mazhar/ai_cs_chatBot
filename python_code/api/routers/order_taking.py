@@ -12,7 +12,7 @@ order_taking_router = APIRouter(tags=[cfg.ROUTES.ORDER_TAKING_TAG])
 
 @order_taking_router.post(
     cfg.ROUTES.ORDER_TAKING,
-    # response_model=OrderTakingResponse,
+    response_model=OrderTakingResponse,
     status_code=status.HTTP_200_OK,
 )
 def order_taking(request: dict) -> dict[str, Any]:

@@ -16,7 +16,6 @@ from fastapi.middleware.trustedhost import TrustedHostMiddleware
 from fastapi.responses import HTMLResponse
 from loguru import logger
 from routers import desc_router, order_taking_router
-from schemas import OrderTakingResponse
 
 # setup logging as early as possible
 setup_logging(config=settings)
@@ -31,7 +30,7 @@ app = FastAPI(
     title=f"{cfg.VERSION.API_PROJECT_NAME}",
     openapi_url=f"{preFix}/openapi.json",
     swagger_ui_parameters={"syntaxHighlight.theme": "obsidian"},
-    # servers=settings.SERVERS,
+    servers=settings.SERVERS,
 )
 
 # models.Base.metadata.create_all(bind=engine)
