@@ -21,14 +21,14 @@ load_dotenv()
 
 class GuardAgent:
     def __init__(self, number_of_messages_to_look_back: int = 5) -> None:
-        # Debug prints
-        api_key = os.getenv("OPENAI_API_KEY")
-        base_url = os.getenv("BASE_URL")
+        # # Debug prints
+        # api_key = os.getenv("OPENAI_API_KEY")
+        # base_url = os.getenv("BASE_URL")
 
-        print("Debug environment variables:")
-        print(f"API Key exists: {api_key is not None}")
-        print(f"API Key length: {len(api_key) if api_key else 0}")
-        print(f"Base URL: {base_url}")
+        # print("Debug environment variables:")
+        # print(f"API Key exists: {api_key is not None}")
+        # print(f"API Key length: {len(api_key) if api_key else 0}")
+        # print(f"Base URL: {base_url}")
 
         self.client = OpenAI(
             api_key=os.getenv("OPENAI_API_KEY"),
